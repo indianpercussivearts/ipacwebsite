@@ -6,7 +6,7 @@ const graduated = [
     id: 'advait',
     name: 'Advait Krishnan',
     profile: '/photos/students/advait/profile.jpeg',
-    bio: 'Advait Krishnan is the youngest student to have learned mridangam, having begun his training at the age of two. He also remains the youngest student to date to present a graduation concert. In addition to his training at IPAC, Advait received guidance from Vidwan B. Ganapathyraman in Chennai. Beyond mridangam, he is proficient in kanjira, bass guitar, and piano, making him a talented multi-instrumentalist.',
+    bio: 'Advait Krishnan is the youngest student to have learned mridangam, having begun his training at the age of two. He also remains the youngest student to date to present a graduation concert. In addition to his training at IPAC, Advait received advanced training from Vidwan B. Ganapathyraman in Chennai. Beyond mridangam, he is proficient in kanjira, bass guitar, and piano, making him a talented multi-instrumentalist.',
     concertPhotos: Array.from({ length: 14 }, (_, i) =>
       `/photos/students/advait/concert-${String(i + 1).padStart(2, '0')}.jpeg`
     ),
@@ -63,7 +63,7 @@ export default function Students() {
         {/* ── Graduated Students ── */}
         <section className="students-section">
           <h1 className="section-title">Graduated Students</h1>
-          <p className="section-subtitle">Students who have completed their training and presented a graduation concert</p>
+          <p className="section-subtitle">Students who completed the graduation requirements and presented a public graduation concert</p>
 
           <div className="students-grid">
             {graduated.map(student => (
