@@ -20,14 +20,16 @@ export default function Home() {
           <p className="home-eyebrow">Sammamish, WA</p>
           <h1 className="home-title">Indian Percussive<br />Arts Center</h1>
           <p className="home-tagline">
-            A pioneering approach to teaching, sustaining, and advancing the art of Indian classical percussion.
+            Where ancient rhythm becomes living expression.
           </p>
           <p className="home-description">
             Founded by Jagadeeswaran Jayaprakash, a celebrated Indian percussionist, collaborator, and
-            teacher based in the Pacific Northwest, IPAC has established itself as a leading home for Carnatic
-            percussion in the region. Through the IPAC Continuum Method, students progress from their
-            very first lesson to the graduation stage, building deep artistry and a lifelong connection
-            to the tradition.
+            teacher based in the Pacific Northwest, IPAC is the avant-garde of Carnatic percussion in the
+            Pacific Northwest. The school centers on the mridangam, the foundational voice of South Indian
+            classical music, while holding a vision that reaches beyond Carnatic percussion into the wider
+            world of rhythm, where cultures meet and connect. Through the IPAC Continuum Method,
+            students progress from their very first lesson to the graduation stage, building deep artistry
+            and a lifelong connection to a tradition that is very much alive and growing.
           </p>
           <div className="home-actions">
             <Link to="/philosophy" className="btn">Our Teaching Method</Link>
@@ -97,6 +99,11 @@ export default function Home() {
               Trained by Smt Sukkanya Ramgopal, Sri B Ganapathyraman and
               Dr. Trichy Sankaran, he continues to shape the region's music culture through
               performances, collaborations, and teaching.
+            </p>
+            <p>
+              Not restricted to just the traditional repertoire, Jagadeeswaran actively composes
+              and creates new work, considering the percussion language as an extension of human
+              expression, and weaving social themes and messages into his compositions.
             </p>
             <p>
               Honored with the title "Laya Shiromani" by Samskriti Kala Kendra in 2023, he also
