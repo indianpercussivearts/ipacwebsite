@@ -29,7 +29,7 @@ export default function Home() {
             performances, collaborations, and teaching.
           </p>
           <p>
-            Honored with the title "Laya Shiromani" in 2023, he also serves on the board of
+            Honored with the title "Laya Shiromani" by Samskriti Kala Kendra in 2023, he also serves on the board of
             the Chamber of Indian Performing Arts and leads the Indian Percussive Arts Center.
           </p>
 
@@ -41,10 +41,6 @@ export default function Home() {
             <div className="stat">
               <span className="stat-number">16</span>
               <span className="stat-label">Years Teaching</span>
-            </div>
-            <div className="stat">
-              <span className="stat-number">3</span>
-              <span className="stat-label">Renowned Gurus</span>
             </div>
           </div>
 
