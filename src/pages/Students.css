@@ -1,0 +1,270 @@
+.students-section {
+  margin-bottom: 1rem;
+}
+
+/* ── Student card grid ── */
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.student-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  cursor: default;
+  padding: 0;
+}
+
+/* Graduated cards are clickable */
+.student-card:not(.student-card--ta) {
+  cursor: pointer;
+}
+
+.student-card:not(.student-card--ta):hover {
+  border-color: var(--color-gold);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(160, 98, 14, 0.12);
+}
+
+/* Photo */
+.student-photo-wrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.student-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.student-card:not(.student-card--ta):hover .student-photo-wrap img {
+  transform: scale(1.04);
+}
+
+/* Hover overlay */
+.student-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(160, 98, 14, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.student-card:not(.student-card--ta):hover .student-overlay {
+  opacity: 1;
+}
+
+.student-overlay span {
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+/* Info */
+.student-info {
+  padding: 1.25rem 1.4rem 1.4rem;
+}
+
+.student-name {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  color: var(--color-text);
+}
+
+.student-bio {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ── Lightbox ── */
+.lb-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(44, 30, 15, 0.90);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.lb-modal {
+  background: var(--color-bg);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1100px;
+  max-height: 92vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.lb-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+}
+
+.lb-close:hover {
+  background: var(--color-border);
+}
+
+.lb-body {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  overflow: hidden;
+  flex: 1;
+  min-height: 0;
+}
+
+@media (max-width: 700px) {
+  .lb-body { grid-template-columns: 1fr; overflow-y: auto; }
+}
+
+/* Bio panel */
+.lb-bio-panel {
+  padding: 2rem 1.5rem;
+  border-right: 1px solid var(--color-border);
+  overflow-y: auto;
+  background: var(--color-surface);
+}
+
+.lb-bio-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.lb-bio-name {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.lb-bio-text {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+}
+
+/* Photo panel */
+.lb-photo-panel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 1rem;
+  gap: 0.75rem;
+}
+
+.lb-photo-main {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.lb-photo-main img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.lb-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(253, 248, 240, 0.15);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  line-height: 1;
+}
+
+.lb-arrow:hover {
+  background: rgba(253, 248, 240, 0.35);
+}
+
+.lb-arrow--left  { left: 0.5rem; }
+.lb-arrow--right { right: 0.5rem; }
+
+.lb-counter {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Thumbnails */
+.lb-thumbs {
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.lb-thumb {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  transition: border-color 0.15s;
+}
+
+.lb-thumb.active {
+  border-color: var(--color-gold);
+}
+
+.lb-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

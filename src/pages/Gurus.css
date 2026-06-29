@@ -1,0 +1,52 @@
+.gurus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.guru-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 600px) {
+  .guru-card { grid-template-columns: 1fr; }
+}
+
+.guru-photo-box {
+  aspect-ratio: 1/1;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+.guru-name {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.guru-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.guru-era {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.guru-bio {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
