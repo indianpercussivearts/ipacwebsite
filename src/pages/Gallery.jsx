@@ -12,6 +12,14 @@ const workshops = [
     caption: 'Workshop with Vidwan Praveen Sparsh',
     objectPosition: 'center 25%',
   },
+  {
+    src: '/photos/gallery/workshops/vidwan-b-sivaraman.jpg',
+    caption: 'Workshop with Vidwan B. Sivaraman',
+  },
+  {
+    src: '/photos/gallery/workshops/tiruvarur-bhaktavatsalam.jpg',
+    caption: 'Workshop with Sangeeta Kalanidhi Tiruvarur Bhaktavatsalam',
+  },
 ]
 
 const concerts = [
