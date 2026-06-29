@@ -19,11 +19,15 @@ export default function Home() {
         <div className="home-intro">
           <p className="home-eyebrow">Sammamish, WA</p>
           <h1 className="home-title">Indian Percussive<br />Arts Center</h1>
+          <p className="home-tagline">
+            A pioneering approach to teaching, sustaining, and advancing the art of Indian classical percussion.
+          </p>
           <p className="home-description">
-            IPAC is a mridangam school dedicated to nurturing students from their very first lesson
-            through the graduation stage. Rooted in the Carnatic tradition and guided by the
-            IPAC Continuum Method, we believe every student can grow into a confident,
-            expressive performing artist through sustained and disciplined training.
+            Founded by Jagadeeswaran Jayaprakash, a celebrated Indian percussionist, collaborator, and
+            teacher based in the Pacific Northwest, IPAC has established itself as a leading home for Carnatic
+            percussion in the region. Through the IPAC Continuum Method, students progress from their
+            very first lesson to the graduation stage, building deep artistry and a lifelong connection
+            to the tradition.
           </p>
           <div className="home-actions">
             <Link to="/philosophy" className="btn">Our Teaching Method</Link>
