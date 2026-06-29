@@ -1,19 +1,150 @@
-/* Founder layout */
-.founder {
+/* ── Hero ── */
+.home-hero {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  max-width: 720px;
+}
+
+.home-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.home-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  color: var(--color-text);
+}
+
+.home-description {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 2rem;
+}
+
+.home-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ── Collage ── */
+.home-collage {
+  padding-bottom: 3rem;
+}
+
+.collage-grid {
   display: grid;
-  grid-template-columns: 420px 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  height: 520px;
+}
+
+.collage-featured {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.collage-featured img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.collage-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.75rem;
+  height: 100%;
+}
+
+.collage-thumb {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.collage-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .collage-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .collage-featured { height: 280px; }
+  .collage-side { height: auto; grid-template-rows: auto; }
+  .collage-thumb { height: 160px; }
+}
+
+/* ── Stats ── */
+.home-stats {
+  border-top: 1px solid var(--color-border);
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.stat-row {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* ── Founder bio ── */
+.home-founder {
+  padding-bottom: 4rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 3.5rem;
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
   gap: 4rem;
   align-items: start;
 }
 
 @media (max-width: 900px) {
-  .founder {
+  .founder-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 }
 
-/* Photo */
 .founder-photo-col {
   position: sticky;
   top: calc(var(--nav-height) + 2rem);
@@ -33,23 +164,12 @@
   .founder-photo { max-height: 420px; }
 }
 
-/* Bio */
-.founder-eyebrow {
-  font-family: var(--font-heading);
-  font-size: 0.8rem;
-  letter-spacing: 0.18em;
-  color: var(--color-gold);
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-
 .founder-name {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  line-height: 1.15;
-  margin-bottom: 1rem;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
   color: var(--color-text);
 }
-
 
 .founder-bio-col p {
   color: var(--color-text-muted);
@@ -58,46 +178,7 @@
   font-size: 1rem;
 }
 
-/* Stats */
-.founder-stats {
-  display: flex;
-  gap: 2.5rem;
-  margin: 2rem 0;
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-  flex-wrap: wrap;
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.2rem;
-}
-
-.stat-number {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  color: var(--color-gold);
-  line-height: 1;
-}
-
-.stat-label {
-  font-size: 0.78rem;
-  color: var(--color-text-muted);
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
-/* Actions */
-.founder-actions {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 1.75rem;
-}
-
+/* ── Buttons ── */
 .btn-outline {
   background: transparent;
   border-color: var(--color-text-muted);
@@ -109,4 +190,3 @@
   color: var(--color-gold);
   background: transparent;
 }
-
