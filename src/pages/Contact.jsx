@@ -9,7 +9,7 @@ export default function Contact() {
         <div className="admissions-note">
           <h2 className="admissions-title">Joining the IPAC Community</h2>
           <p>
-            IPAC practices selective admission — not as a barrier, but as a reflection of
+            IPAC practices selective admission, not as a barrier, but as a reflection of
             the deep commitment this path requires. Every student who joins becomes part of
             a close-knit community built around a shared, futuristic vision for the artform.
           </p>
