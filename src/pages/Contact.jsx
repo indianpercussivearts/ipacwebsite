@@ -7,23 +7,22 @@ export default function Contact() {
         <h1 className="section-title">Get in Touch</h1>
 
         <div className="admissions-note">
-          <h2 className="admissions-title">A note on admissions</h2>
+          <h2 className="admissions-title">Joining the IPAC Community</h2>
           <p>
-            IPAC is intentionally small. We do not take on new students regularly.
-            Every student who joins becomes part of a close-knit community that receives
-            deep, focused attention over many years.
+            IPAC practices selective admission — not as a barrier, but as a reflection of
+            the deep commitment this path requires. Every student who joins becomes part of
+            a close-knit community built around a shared, futuristic vision for the artform.
           </p>
           <p>
-            Our commitment is to quality of learning, not volume of enrolment. Each new
-            student is welcomed only when we are confident the relationship, the
-            readiness, and the shared values are right.
+            We value dedication, curiosity, and a willingness to grow over the long term.
+            Our goal is to instill in every student the music knowledge, confidence, and
+            experience to become a responsible ambassador of this artform in the future.
           </p>
           <p>
-            If you feel a genuine calling to learn mridangam and the{' '}
-            <a href="#/philosophy">IPAC philosophy</a> resonates with you, we would love
-            to hear from you. Please write a detailed email and tell us about yourself,
-            your relationship with music, and what draws you to this path. We read every
-            message carefully and will get back to you.
+            If the <a href="#/philosophy">IPAC philosophy</a> resonates with you, we would
+            love to hear from you. Write to us and tell us about yourself, your relationship
+            with music, and what draws you to this path. We read every message carefully
+            and will get back to you.
           </p>
         </div>
 

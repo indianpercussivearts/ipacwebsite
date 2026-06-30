@@ -24,11 +24,17 @@ export default function Home() {
           <p className="home-description">
             Founded by Jagadeeswaran Jayaprakash, a celebrated Indian percussionist, collaborator, and
             teacher based in the Pacific Northwest, IPAC is the avant-garde of Carnatic percussion in the
-            Pacific Northwest. The school centers on the mridangam, the foundational voice of South Indian
-            classical music, while holding a vision that reaches beyond Carnatic percussion into the wider
-            world of rhythm, where cultures meet and connect. Through the IPAC Continuum Method,
-            students progress from their very first lesson to the graduation stage, building deep artistry
-            and a lifelong connection to a tradition that is very much alive and growing.
+            Pacific Northwest.
+          </p>
+          <p className="home-description">
+            The school centers on the mridangam, the foundational voice of South Indian classical music,
+            while holding a vision that reaches beyond Carnatic percussion into the wider world of rhythm,
+            where cultures meet and connect.
+          </p>
+          <p className="home-description">
+            Through the IPAC Continuum Method, students progress from their very first lesson to the
+            graduation stage, building deep artistry and a lifelong connection to a tradition that is
+            very much alive and growing.
           </p>
           <div className="home-actions">
             <Link to="/philosophy" className="btn">Our Teaching Method</Link>
