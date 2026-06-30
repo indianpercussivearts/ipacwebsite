@@ -43,59 +43,49 @@
   flex-wrap: wrap;
 }
 
-/* ── Collage ── */
-.home-collage {
+/* ── Photos ── */
+.home-photos {
   padding-bottom: 3rem;
 }
 
-.collage-grid {
+.photo-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: 400px 155px 155px;
   gap: 0.75rem;
-  height: 520px;
 }
 
-.collage-featured {
+.photo-item {
   border-radius: 10px;
   overflow: hidden;
-  height: 100%;
 }
 
-.collage-featured img {
+.photo-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.collage-side {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0.75rem;
-  height: 100%;
+/* Group 2025 — full width, tallest */
+.photo-item:nth-child(1) {
+  grid-column: 1 / -1;
 }
 
-.collage-thumb {
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.collage-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+/* Swarayoga — left column, spans both small rows */
+.photo-item:nth-child(2) {
+  grid-row: 2 / 4;
 }
 
 @media (max-width: 700px) {
-  .collage-grid {
+  .photo-grid {
     grid-template-columns: 1fr;
-    height: auto;
+    grid-template-rows: auto;
   }
-  .collage-featured { height: 280px; }
-  .collage-side { height: auto; grid-template-rows: auto; }
-  .collage-thumb { height: 160px; }
+  .photo-item:nth-child(1) { height: 240px; }
+  .photo-item:nth-child(2) { grid-row: auto; height: 200px; }
+  .photo-item:nth-child(3),
+  .photo-item:nth-child(4) { height: 160px; }
 }
 
 /* ── Stats ── */

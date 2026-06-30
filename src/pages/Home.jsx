@@ -3,11 +3,10 @@ import founderPhoto from '/photos/MyPhoto.jpeg'
 import './Home.css'
 
 const collagePhotos = [
-  { src: '/photos/homepage/group-recital.jpg',    alt: 'IPAC students at recital',           objectPosition: 'center 20%' },
-  { src: '/photos/homepage/group-early.jpg',      alt: 'IPAC student group',                 objectPosition: 'center 15%' },
-  { src: '/photos/homepage/group-concert-2024.jpg', alt: 'Students at graduation concert',   objectPosition: 'center 15%' },
-  { src: '/photos/homepage/group-event-2024.jpg', alt: 'Students at a performance',          objectPosition: 'center 20%' },
-  { src: '/photos/homepage/group-workshop.jpg',   alt: 'Workshop with students',             objectPosition: 'center 20%' },
+  { src: '/photos/homepage/cipa-concert.jpg',   alt: 'Students performing at CIPA concert',  objectPosition: 'center center' },
+  { src: '/photos/homepage/group-2025.jpg',     alt: 'IPAC student community 2025',           objectPosition: 'center 25%' },
+  { src: '/photos/homepage/home-lesson.jpg',    alt: 'Home lesson with students',             objectPosition: 'center center' },
+  { src: '/photos/homepage/swarayoga-2025.jpg', alt: 'Students performing at Swarayoga 2025', objectPosition: 'center 65%' },
 ]
 
 export default function Home() {
@@ -38,27 +37,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Photo collage ── */}
-      <section className="home-collage container">
-        <div className="collage-grid">
-          <div className="collage-featured">
-            <img
-              src={collagePhotos[0].src}
-              alt={collagePhotos[0].alt}
-              style={{ objectPosition: collagePhotos[0].objectPosition }}
-            />
-          </div>
-          <div className="collage-side">
-            {collagePhotos.slice(1).map((photo, i) => (
-              <div className="collage-thumb" key={i}>
-                <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  style={{ objectPosition: photo.objectPosition }}
-                />
-              </div>
-            ))}
-          </div>
+      {/* ── Photos ── */}
+      <section className="home-photos container">
+        <div className="photo-grid">
+          {collagePhotos.map((photo, i) => (
+            <div className="photo-item" key={i}>
+              <img src={photo.src} alt={photo.alt} style={{ objectPosition: photo.objectPosition }} />
+            </div>
+          ))}
         </div>
       </section>
 
@@ -70,7 +56,7 @@ export default function Home() {
             <span className="stat-label">Students Trained</span>
           </div>
           <div className="stat">
-            <span className="stat-number">16</span>
+            <span className="stat-number">16+</span>
             <span className="stat-label">Years Teaching</span>
           </div>
         </div>
