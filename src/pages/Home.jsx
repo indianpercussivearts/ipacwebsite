@@ -62,7 +62,7 @@ export default function Home() {
             <span className="stat-label">Students Trained</span>
           </div>
           <div className="stat">
-            <span className="stat-number">16+</span>
+            <span className="stat-number">17+</span>
             <span className="stat-label">Years Teaching</span>
           </div>
         </div>
