@@ -3,6 +3,18 @@ import './Students.css'
 
 const graduated = [
   {
+    id: 'anish',
+    name: 'Anish Mandyam',
+    profile: '/photos/students/anish/profile.jpg',
+    objectPosition: 'center 25%',
+    bio: 'Anish Mandyam was the first student from IPAC to present a graduation concert. He began learning mridangam in 2011 under Jagadeeswaran Jayaprakash and went on to spend several years training under Vidwan B. Ganapathyraman in Chennai. Equally accomplished on tabla, he studied under Ravi Albright in Seattle. Anish is a sought-after dance accompanist who has performed for over 20 dance arangetrams, keeping a busy performance schedule each summer during arangetram season. He is currently a junior at Embry-Riddle Aeronautical University in Florida.',
+    concertPhotos: [
+      '/photos/students/anish/concert-01.jpg',
+      '/photos/students/anish/concert-02.jpg',
+      '/photos/students/anish/concert-03.jpg',
+    ],
+  },
+  {
     id: 'advait',
     name: 'Advait Krishnan',
     profile: '/photos/students/advait/profile.jpeg',
@@ -24,6 +36,13 @@ const graduated = [
 ]
 
 const teachingAssistants = [
+  {
+    id: 'anish',
+    name: 'Anish Mandyam',
+    profile: '/photos/students/anish/profile.jpg',
+    objectPosition: 'center 25%',
+    bio: 'Anish brings a wealth of experience as IPAC’s first graduation concert student, with training under Jagadeeswaran Jayaprakash, Vidwan B. Ganapathyraman, and Ravi Albright on tabla. As an accomplished dance accompanist for over 20 arangetrams, he offers students a performer’s perspective as a teaching assistant.',
+  },
   {
     id: 'advait',
     name: 'Advait Krishnan',
