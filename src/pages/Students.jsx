@@ -8,6 +8,7 @@ const graduated = [
     profile: '/photos/students/anish/profile.jpg',
     objectPosition: 'center 25%',
     bio: 'Anish Mandyam was the first student from IPAC to present a graduation concert. He began learning mridangam in 2011 under Jagadeeswaran Jayaprakash and went on to spend several years training under Vidwan B. Ganapathyraman in Chennai. Equally accomplished on tabla, he studied under Ravi Albright in Seattle. Anish is a sought-after dance accompanist who has performed for over 20 dance arangetrams, keeping a busy performance schedule each summer during arangetram season. He is currently a junior at Embry-Riddle Aeronautical University in Florida.',
+    funFact: 'Anish has a rare photographic ear for rhythm: he can listen to any korvai once and play it back perfectly on the very first attempt.',
     concertPhotos: [
       '/photos/students/anish/concert-01.jpg',
       '/photos/students/anish/concert-02.jpg',
@@ -19,6 +20,7 @@ const graduated = [
     name: 'Advait Krishnan',
     profile: '/photos/students/advait/profile.jpeg',
     bio: 'Advait Krishnan is the youngest student to have learned mridangam, having begun his training at the age of two. He also remains the youngest student to date to present a graduation concert. In addition to his training at IPAC, Advait received advanced training from Vidwan B. Ganapathyraman in Chennai. Beyond mridangam, he is proficient in kanjira, bass guitar, and piano, making him a talented multi-instrumentalist.',
+    funFact: 'Advait began learning mridangam before he was potty trained.',
     concertPhotos: Array.from({ length: 14 }, (_, i) =>
       `/photos/students/advait/concert-${String(i + 1).padStart(2, '0')}.jpeg`
     ),
@@ -28,10 +30,23 @@ const graduated = [
     name: 'Mukund Akella',
     profile: '/photos/students/mukund/profile.jpg',
     objectPosition: 'center top',
-    bio: 'Mukund Akella has trained under Jagadeeswaran Jayaprakash since 2015, and has taken advanced lessons from Vidwan DSR Murthy in Hyderabad. He has also learned tabla at the Anindo Chatterjee Institute under Ravi Albright. His playing is marked by a natural ease in sarvalaghu and sowkyam, a quality that has made him the preferred mridangist of Grammy Award-winning violinist Sri Ganesh Rajagopalan for student performances across Seattle. Mukund was admitted directly to the University of Washington Robinson Center program after completing 10th grade.',
+    bio: 'Mukund Akella has trained under Jagadeeswaran Jayaprakash since 2015, and has taken advanced lessons from Vidwan DSR Murthy in Hyderabad. He has also learned tabla at the Anindo Chatterjee Institute under Ravi Albright. Mukund was admitted directly to the University of Washington Robinson Center program after completing 10th grade.',
+    funFact: 'His playing is marked by a natural ease in sarvalaghu and sowkyam, a quality that has made him the preferred mridangist of Grammy Award-winning violinist Sri Ganesh Rajagopalan for student performances across Seattle.',
     concertPhotos: Array.from({ length: 5 }, (_, i) =>
       `/photos/students/mukund/concert-${String(i + 1).padStart(2, '0')}.jpg`
     ),
+  },
+  {
+    id: 'anirud',
+    name: 'Anirud Parthasarathy',
+    profile: '/photos/students/anirud/profile.png',
+    objectPosition: 'center top',
+    bio: 'Anirud Parthasarathy began his mridangam journey under Jagadeeswaran Jayaprakash in 2016, and since 2021 has received advanced training directly from Vidwan B. Ganapathyraman in Chennai, returning for in-person lessons across multiple summers to deepen his craft. In 2025, he made history as the first IPAC student to present a graduation concert in Chennai itself: a concert graced by the acclaimed vocalist Sikkil Gurucharan. Beyond the concert stage, Anirud is one of Seattle\'s most active mridangam accompanists in the dance arangetram circuit, having accompanied numerous performances with steadiness and artistry. Since 2026, he has also served as a teaching assistant at IPAC, bringing his stage experience to the next generation of students.',
+    funFact: 'Anirud once devoted an entire summer solely to mastering the subtle gumkis in Vidwan Ganapathyraman\'s style. The dedication paid off: seasoned musicians have specifically noted his exceptional command over gumkis and the precise right/left balance on mridangam.',
+    concertPhotos: [
+      '/photos/students/anirud/concert-01.jpg',
+      '/photos/students/anirud/concert-02.jpg',
+    ],
   },
 ]
 
@@ -41,13 +56,20 @@ const teachingAssistants = [
     name: 'Anish Mandyam',
     profile: '/photos/students/anish/profile.jpg',
     objectPosition: 'center 25%',
-    bio: 'Anish brings a wealth of experience as IPAC’s first graduation concert student, with training under Jagadeeswaran Jayaprakash, Vidwan B. Ganapathyraman, and Ravi Albright on tabla. As an accomplished dance accompanist for over 20 arangetrams, he offers students a performer’s perspective as a teaching assistant.',
+    bio: 'Anish brings a wealth of experience as IPAC\'s first graduation concert student, with training under Jagadeeswaran Jayaprakash, Vidwan B. Ganapathyraman, and Ravi Albright on tabla. As an accomplished dance accompanist for over 20 arangetrams, he offers students a performer\'s perspective as a teaching assistant.',
   },
   {
     id: 'advait',
     name: 'Advait Krishnan',
     profile: '/photos/students/advait/profile.jpeg',
     bio: 'Advait brings exceptional depth for his age, drawing on both his IPAC training and guidance from Vidwan B. Ganapathyraman. He is proficient in mridangam, kanjira, bass guitar, and piano, which gives him a uniquely broad musical perspective as a teaching assistant.',
+  },
+  {
+    id: 'anirud',
+    name: 'Anirud Parthasarathy',
+    profile: '/photos/students/anirud/profile.png',
+    objectPosition: 'center top',
+    bio: 'Anirud brings the perspective of a student who trained across two continents: refined in Seattle under Jagadeeswaran Jayaprakash and deepened in Chennai under Vidwan B. Ganapathyraman. As the first IPAC student to present a graduation concert in Chennai, and an active mridangam accompanist in the Seattle arangetram circuit, he offers students both technical depth and real-stage experience.',
   },
 ]
 
@@ -104,6 +126,12 @@ export default function Students() {
                 <div className="student-info">
                   <h2 className="student-name">{student.name}</h2>
                   <p className="student-bio">{student.bio}</p>
+                  {student.funFact && (
+                    <div className="student-funfact">
+                      <span className="student-funfact-label">Fun Fact</span>
+                      {student.funFact}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -150,6 +178,12 @@ export default function Students() {
                 />
                 <h2 className="lb-bio-name">{lightbox.student.name}</h2>
                 <p className="lb-bio-text">{lightbox.student.bio}</p>
+                {lightbox.student.funFact && (
+                  <div className="lb-funfact">
+                    <span className="student-funfact-label">Fun Fact</span>
+                    {lightbox.student.funFact}
+                  </div>
+                )}
               </div>
 
               {/* Photo panel */}
