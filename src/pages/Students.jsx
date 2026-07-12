@@ -5,6 +5,7 @@ const graduated = [
   {
     id: 'anish',
     name: 'Anish Mandyam',
+    graduationDate: 'August 2023',
     profile: '/photos/students/anish/profile.jpg',
     objectPosition: 'center 25%',
     bio: 'Anish Mandyam was the first student from IPAC to present a graduation concert. He began learning mridangam in 2011 under Jagadeeswaran Jayaprakash and went on to spend several years training under Vidwan B. Ganapathyraman in Chennai. Equally accomplished on tabla, he studied under Ravi Albright in Seattle. Anish is a sought-after dance accompanist who has performed for over 20 dance arangetrams, keeping a busy performance schedule each summer during arangetram season. He is currently a junior at Embry-Riddle Aeronautical University in Florida.',
@@ -18,6 +19,7 @@ const graduated = [
   {
     id: 'advait',
     name: 'Advait Krishnan',
+    graduationDate: 'April 2024',
     profile: '/photos/students/advait/profile.jpeg',
     bio: 'Advait Krishnan is the youngest student to have learned mridangam, having begun his training at the age of two. He also remains the youngest student to date to present a graduation concert. In addition to his training at IPAC, Advait received advanced training from Vidwan B. Ganapathyraman in Chennai. Beyond mridangam, he is proficient in kanjira, bass guitar, and piano, making him a talented multi-instrumentalist.',
     funFact: 'Advait began learning mridangam before he was potty trained.',
@@ -28,6 +30,7 @@ const graduated = [
   {
     id: 'mukund',
     name: 'Mukund Akella',
+    graduationDate: 'August 2025',
     profile: '/photos/students/mukund/profile.jpg',
     objectPosition: 'center top',
     bio: 'Mukund Akella has trained under Jagadeeswaran Jayaprakash since 2015, and has taken advanced lessons from Vidwan DSR Murthy in Hyderabad. He has also learned tabla at the Anindo Chatterjee Institute under Ravi Albright. Mukund was admitted directly to the University of Washington Robinson Center program after completing 10th grade.',
@@ -39,6 +42,7 @@ const graduated = [
   {
     id: 'anirud',
     name: 'Anirud Parthasarathy',
+    graduationDate: 'September 2025',
     profile: '/photos/students/anirud/profile.png',
     objectPosition: 'center top',
     bio: 'Anirud Parthasarathy began his mridangam journey under Jagadeeswaran Jayaprakash in 2016, and since 2021 has received advanced training directly from Vidwan B. Ganapathyraman in Chennai, returning for in-person lessons across multiple summers to deepen his craft. In 2025, he made history as the first IPAC student to present a graduation concert in Chennai itself: a concert graced by the acclaimed vocalist Sikkil Gurucharan. Beyond the concert stage, Anirud is one of Seattle\'s most active mridangam accompanists in the dance arangetram circuit, having accompanied numerous performances with steadiness and artistry. Since 2026, he has also served as a teaching assistant at IPAC, bringing his stage experience to the next generation of students.',
@@ -46,6 +50,19 @@ const graduated = [
     concertPhotos: [
       '/photos/students/anirud/concert-01.jpg',
       '/photos/students/anirud/concert-02.jpg',
+    ],
+  },
+  {
+    id: 'srikaran',
+    name: 'Srikaran Sriperumbudur',
+    graduationDate: 'May 2026',
+    profile: '/photos/students/srikaran/profile.jpeg',
+    objectPosition: 'center 25%',
+    bio: 'Srikaran Sriperumbudur began learning mridangam at IPAC under Jagadeeswaran Jayaprakash in 2016. For advanced training he has studied under Vidwan DSR Murthy in Hyderabad over several years, with Vidwan Murthy playing a central role in preparing him for his graduation concert in May 2026.',
+    funFact: 'A devoted admirer of Sangeetha Kalanidhi Trichy Sankaran, Srikaran became captivated by his signature tha-na-ki-ta dhi-na-ki-ta sarvalaghu pattern. During the COVID lockdown he spent hours each day practicing and perfecting it.',
+    concertPhotos: [
+      '/photos/students/srikaran/concert-01.jpeg',
+      '/photos/students/srikaran/concert-02.jpeg',
     ],
   },
 ]
@@ -139,6 +156,9 @@ export default function Students() {
                 </div>
                 <div className="student-info">
                   <h2 className="student-name">{student.name}</h2>
+                  {student.graduationDate && (
+                    <p className="student-graduation-date">Graduated {student.graduationDate}</p>
+                  )}
                   <p className="student-bio">{student.bio}</p>
                   {student.funFact && (
                     <div className="student-funfact">
@@ -191,6 +211,9 @@ export default function Students() {
                   className="lb-bio-photo"
                 />
                 <h2 className="lb-bio-name">{lightbox.student.name}</h2>
+                {lightbox.student.graduationDate && (
+                  <p className="student-graduation-date">Graduated {lightbox.student.graduationDate}</p>
+                )}
                 <p className="lb-bio-text">{lightbox.student.bio}</p>
                 {lightbox.student.funFact && (
                   <div className="lb-funfact">
