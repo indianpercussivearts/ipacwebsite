@@ -7,7 +7,8 @@ const links = [
   { to: '/', label: 'About' },
   { to: '/philosophy', label: 'Philosophy' },
   { to: '/events', label: 'Events' },
-  { to: '/students', label: 'Students' },
+  { to: '/graduated-students', label: 'Graduated Students' },
+  { to: '/teaching-assistants', label: 'Teaching Assistants' },
   { to: '/gallery', label: 'Gallery' },
   { to: '/contact', label: 'Contact' },
 ]
