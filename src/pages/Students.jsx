@@ -43,8 +43,9 @@ const graduated = [
     id: 'anirud',
     name: 'Anirud Parthasarathy',
     graduationDate: 'September 2025',
-    profile: '/photos/students/anirud/profile.png',
-    objectPosition: 'center top',
+    profile: '/photos/students/anirud/profile.jpeg',
+    objectPosition: 'center 65%',
+    photoScale: 1.5,
     bio: 'Anirud Parthasarathy began his mridangam journey under Jagadeeswaran Jayaprakash in 2016, and since 2021 has received advanced training directly from Vidwan B. Ganapathyraman in Chennai, returning for in-person lessons across multiple summers to deepen his craft. In 2025, he made history as the first IPAC student to present a graduation concert in Chennai itself: a concert graced by the acclaimed vocalist Sikkil Gurucharan. Beyond the concert stage, Anirud is one of Seattle\'s most active mridangam accompanists in the dance arangetram circuit, having accompanied numerous performances with steadiness and artistry. Since 2026, he has also served as a teaching assistant at IPAC, bringing his stage experience to the next generation of students.',
     funFact: 'Anirud once devoted an entire summer solely to mastering the subtle gumkis in Vidwan Ganapathyraman\'s style. The dedication paid off: seasoned musicians have specifically noted his exceptional command over gumkis and the precise right/left balance on mridangam.',
     concertPhotos: [
@@ -98,8 +99,9 @@ const teachingAssistants = [
   {
     id: 'anirud',
     name: 'Anirud Parthasarathy',
-    profile: '/photos/students/anirud/profile.png',
-    objectPosition: 'center top',
+    profile: '/photos/students/anirud/profile.jpeg',
+    objectPosition: 'center 65%',
+    photoScale: 1.5,
     bio: 'Anirud brings the perspective of a student who trained across two continents: refined in Seattle under Jagadeeswaran Jayaprakash and deepened in Chennai under Vidwan B. Ganapathyraman. As the first IPAC student to present a graduation concert in Chennai, and an active mridangam accompanist in the Seattle arangetram circuit, he offers students both technical depth and real-stage experience.',
   },
 ]
@@ -149,7 +151,7 @@ export default function Students() {
                 aria-label={`View ${student.name}'s graduation concert`}
               >
                 <div className="student-photo-wrap" style={{ aspectRatio: student.photoAspectRatio || '4/3' }}>
-                  <img src={student.profile} alt={student.name} style={{ objectPosition: student.objectPosition || 'center top' }} />
+                  <img src={student.profile} alt={student.name} style={{ objectPosition: student.objectPosition || 'center top', transform: student.photoScale ? `scale(${student.photoScale})` : undefined }} />
                   <div className="student-overlay">
                     <span>View Concert Photos</span>
                   </div>
@@ -183,7 +185,7 @@ export default function Students() {
             {teachingAssistants.map(ta => (
               <div key={ta.id} className="student-card student-card--ta">
                 <div className="student-photo-wrap" style={{ aspectRatio: ta.photoAspectRatio || '4/3' }}>
-                  <img src={ta.profile} alt={ta.name} style={{ objectPosition: ta.objectPosition || 'center top' }} />
+                  <img src={ta.profile} alt={ta.name} style={{ objectPosition: ta.objectPosition || 'center top', transform: ta.photoScale ? `scale(${ta.photoScale})` : undefined }} />
                 </div>
                 <div className="student-info">
                   <h2 className="student-name">{ta.name}</h2>
