@@ -4,9 +4,17 @@ const events = [
   {
     date: '2026-08-30',
     displayDate: 'August 30, 2026',
+    time: '10:00 AM',
     title: 'Madhav Ganapathy — Graduation Concert',
+    venue: 'Carlson Theater, Bellevue, WA',
+    details: ['Vocal: Smt Dharini Kalyanaraman', 'Violin: Smt Nandini Viswanathan', 'Kanjira: Sri KV Gopalakrishnan'],
+  },
+  {
+    date: '2026-09-12',
+    displayDate: 'September 12, 2026',
+    title: 'Anirud Parthasarathy — Concert',
     venue: 'TBD',
-    details: 'Co-artists TBD. Join us in celebrating Madhav Ganapathy\'s graduation from the Indian Percussive Arts Center.',
+    details: 'Co-artists and venue details to be announced.',
   },
 ]
 
@@ -31,11 +39,15 @@ export default function Concerts() {
                 <div className="upcoming-card card" key={i}>
                   <div className="concert-date-block">
                     <span>{c.displayDate}</span>
+                    {c.time && <span className="concert-time">{c.time}</span>}
                   </div>
                   <div className="concert-info">
                     <h3>{c.title}</h3>
                     <p className="concert-venue">{c.venue}</p>
-                    <p className="concert-details">{c.details}</p>
+                    {Array.isArray(c.details)
+                      ? <div className="concert-details">{c.details.map((line, i) => <div key={i}>{line}</div>)}</div>
+                      : <p className="concert-details">{c.details}</p>
+                    }
                   </div>
                 </div>
               ))}
