@@ -29,6 +29,14 @@ const teachingAssistants = [
     bio: 'Srikrishna Srikanth began learning mridangam under Jagadeeswaran Jayaprakash in 2016, and since 2021 has trained under Vidwan Palladam Ravi in Madurai, spending several summers in one-on-one sessions with him. As a teaching assistant since 2025, Srikrishna brings particular focus to the fundamentals: his patient, methodical approach has helped many younger students build a strong foundation in nam, dhin, and chapu.',
   },
   {
+    id: 'srisurya',
+    name: 'Srisurya Chandramouli',
+    profile: '/photos/students/srisurya/profile.jpeg',
+    objectPosition: '75% 30%',
+    photoScale: 1.1,
+    bio: 'Srisurya Chandramouli was already a rising force in mridangam before joining IPAC under Jagadeeswaran Jayaprakash in 2012, having won several competitions including the best mridangist prize in the junior category at the prestigious Cleveland Aradhana. He was an active presence in the Seattle Carnatic music scene until 2016, when he stepped away for college. He returned to training in 2025 and has since taken on the role of teaching assistant at IPAC, bringing his competition-tested experience to younger students.',
+  },
+  {
     id: 'anirud',
     name: 'Anirud Parthasarathy',
     profile: '/photos/students/anirud/profile.jpeg',
