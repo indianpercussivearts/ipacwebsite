@@ -21,7 +21,7 @@ const graduated = [
     name: 'Advait Krishnan',
     graduationDate: 'April 2024',
     profile: '/photos/students/advait/profile.jpeg',
-    bio: 'Advait Krishnan is the youngest student to have learned mridangam, having begun his training at the age of two. He also remains the youngest student to date to present a graduation concert. In addition to his training at IPAC, Advait received advanced training from Vidwan B. Ganapathyraman in Chennai. Beyond mridangam, he is proficient in kanjira, bass guitar, and piano, making him a talented multi-instrumentalist.',
+    bio: 'Advait Krishnan is the youngest student to have learned mridangam, having begun at the age of two, and remains the youngest to present a graduation concert. Beyond his IPAC training, he received advanced instruction from Vidwan B. Ganapathyraman in Chennai and is also proficient in kanjira, bass guitar, and piano. His impeccable sense of rhythm, timing, and tala has earned him both Junior and Senior All State recognition in bass and percussion. During the pandemic, he took part in a global Carnatic rhythm challenge organized by Sangeetha Kalanidhi Sri Chitravina Ravikiran and Sangeetha Kalanidhi Sri Trichy Sankaran — responding to a demanding kanda nadai pattern by reciting it, performing it on mridangam, and creatively reimagining it on bass guitar. He has also actively collaborated in the dance world, accompanying performances and co-creating original dance tracks.',
     funFact: 'Advait began learning mridangam before he was potty trained.',
     concertPhotos: Array.from({ length: 14 }, (_, i) =>
       `/photos/students/advait/concert-${String(i + 1).padStart(2, '0')}.jpeg`
@@ -59,7 +59,7 @@ const graduated = [
     graduationDate: 'May 2026',
     profile: '/photos/students/srikaran/profile.jpeg',
     objectPosition: 'center 25%',
-    bio: 'Srikaran Sriperumbudur began learning mridangam at IPAC under Jagadeeswaran Jayaprakash in 2016. For advanced training he has studied under Vidwan DSR Murthy in Hyderabad over several years, with Vidwan Murthy playing a central role in preparing him for his graduation concert in May 2026.',
+    bio: 'Srikaran Sriperumbudur is a multi-faceted musician who began learning mridangam at IPAC under Jagadeeswaran Jayaprakash in 2016. He pursued advanced training under Vidwan DSR Murthy in Hyderabad over several years, and it was Vidwan Murthy\'s sustained guidance that shaped him for his graduation concert in May 2026. Beyond mridangam, Srika is an accomplished pianist who has cleared Grade 8 of the ABRSM examinations, and a trained Sitar player who has passed the Praveshika Poorna exam. Outside of music, he is passionate about football and fitness.',
     funFact: 'A devoted admirer of Sangeetha Kalanidhi Trichy Sankaran, Srikaran became captivated by his signature tha-na-ki-ta dhi-na-ki-ta sarvalaghu pattern. During the COVID lockdown he spent hours each day practicing and perfecting it.',
     concertPhotos: [
       '/photos/students/srikaran/concert-01.jpeg',

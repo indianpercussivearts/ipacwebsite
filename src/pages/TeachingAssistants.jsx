@@ -19,7 +19,7 @@ const teachingAssistants = [
     id: 'advait',
     name: 'Advait Krishnan',
     profile: '/photos/students/advait/profile.jpeg',
-    bio: 'Advait brings exceptional depth for his age, drawing on both his IPAC training and guidance from Vidwan B. Ganapathyraman. He is proficient in mridangam, kanjira, bass guitar, and piano, which gives him a uniquely broad musical perspective as a teaching assistant.',
+    bio: 'Advait brings exceptional depth for his age, drawing on both his IPAC training and guidance from Vidwan B. Ganapathyraman. A Junior and Senior All State recipient in bass and percussion, he gained global recognition during the pandemic when he responded to a Carnatic rhythm challenge by Sangeetha Kalanidhi Sri Chitravina Ravikiran and Sri Trichy Sankaran — not only identifying a complex kanda nadai pattern but also playing it on mridangam and reimagining it on bass guitar. His broad command across mridangam, kanjira, bass guitar, and piano gives him a uniquely rich perspective as a teaching assistant.',
   },
   {
     id: 'srikrishna',
